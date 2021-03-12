@@ -1,0 +1,11 @@
+<div *ngIf="(transaction | async)">
+	<h2>{{(transaction | async)?.memo | uppercase}} Details</h2>
+	<div><span>id: </span>{{(transaction | async)?.id}}</div>
+	<div><span>Memo: </span>{{(transaction | async)?.memo}}</div>
+	<div><span>Status: </span>Cleared</div>
+	<div *ngIf="(transaction | async)?.deposit"><span>Type: </span>Deposit</div>
+	<div *ngIf="(transaction | async)?.withdraw"><span>Type: </span>Withdraw</div>
+	<div><span>Date: </span>{{(transaction | async)?.date | date:"MM/dd/yyyy hh:mm:ss a"}}</div>
+	<div><span>Amount: </span>{{(transaction | async)?.amount | minusSignToParentheses}}</div>
+	<button (click)="goBack()">return</button>
+</div>

@@ -1,0 +1,20 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+div {
+  text-align: center;
+}
+button,
+input[type="submit"],
+input[type="reset"] {
+  border: none;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  border-radius: 4px;
+  font: Arial, sans-serif;
+  cursor: pointer;
+  outline: inherit;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
